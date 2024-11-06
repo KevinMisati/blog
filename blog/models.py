@@ -1,6 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.utils import timezone
+
+User =  settings.AUTH_USER_MODEL
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
